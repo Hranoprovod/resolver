@@ -18,7 +18,7 @@ func TestResolver(t *testing.T) {
 		nl.Push(node2)
 		resolver := NewResolver(nl, 1)
 		Convey("Resolve resolves the database", func() {
-			resolver.resolve()
+			resolver.Resolve()
 			Convey("Elements are resolved", func() {
 				n1 := (*nl)["node1"]
 				So((*n1.Elements)[0].Name, ShouldEqual, "element1")
