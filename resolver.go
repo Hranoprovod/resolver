@@ -15,6 +15,7 @@ func NewResolver(db *shared.NodeList, maxDepth int) *Resolver {
 	return &Resolver{db, maxDepth}
 }
 
+// Resolve resolves the current database
 func (r *Resolver) Resolve() {
 	for name := range *r.db {
 		r.resolveNode(name, 0)
